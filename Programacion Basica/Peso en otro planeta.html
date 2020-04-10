@@ -18,14 +18,23 @@
     <p>Tu peso es distinto es cada planeta</p>
     <script type="text/javascript">
       var us = prompt("Dime tu peso? ");
+      var planeta = parseInt(prompt("Elige tu planeta 0 es marte, 1 es jupiter"));
       var peso=parseFloat(us);
       var tierrag = 9.8;
       var marteg = 3.7;
       var jupiterg = 24.8;
       var pesofin;
-      pesofin = peso * marteg / tierrag;
-      pesofin= parseFloat(pesofin); // Funcion parse es para convertir de Float a int o al revez
-      document.write("Tu peso en marte es <strong> " + pesofin + " kilos </strong>");
+      if(!planeta){
+        pesofin = peso * marteg / tierrag;
+        pesofin= parseFloat(pesofin); // Funcion parse es para convertir de Float a int o al revez
+        document.write("Tu peso en marte es <strong> " + pesofin + " kilos </strong>");
+      }else if(planeta==1){
+        pesofin = peso * jupiterg / tierrag;
+        pesofin= parseFloat(pesofin); // Funcion parse es para convertir de Float a int o al revez
+        document.write("Tu peso en jupiter es <strong> " + pesofin + " kilos </strong>");
+      }else {
+        alert("Entrada erronea");
+      }
     </script>
   </body>
 </html>
