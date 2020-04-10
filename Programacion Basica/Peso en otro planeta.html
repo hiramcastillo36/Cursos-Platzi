@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Peso en otros planetas</title> <!--Titulo de pagina-->
+    <style type="text/css">
+      body {
+        background-color: #00FFFF;
+        color: black;
+        font-family: Helvetica;
+      }
+      strong {
+        background-color: #FFAAAA;
+      }
+    </style> <!--Atributo de la etiqueta-->
+  </head>
+  <body> <!--Etiqueta para visual para el navegador-->
+    <h1>Tu peso en cualquier planeta</h1>  <!--Etiqueta para titulo-->
+    <p>Tu peso es distinto es cada planeta</p>
+    <script type="text/javascript">
+      var us = prompt("Dime tu peso? ");
+      var peso=parseFloat(us);
+      var tierrag = 9.8;
+      var marteg = 3.7;
+      var jupiterg = 24.8;
+      var pesofin;
+      pesofin = peso * marteg / tierrag;
+      pesofin= parseFloat(pesofin); // Funcion parse es para convertir de Float a int o al revez
+      document.write("Tu peso en marte es <strong> " + pesofin + " kilos </strong>");
+    </script>
+  </body>
+</html>
